@@ -1,0 +1,22 @@
+
+.hide-search {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #4e4e4e !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+}
+
+#productsCarousel::-webkit-scrollbar, #productsCarousel2::-webkit-scrollbar {
+  display: none;
+}
