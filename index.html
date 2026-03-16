@@ -85,12 +85,14 @@
               />
 
               <img
+                id="searchButton"
                 class="h-[18px]"
                 src="images/icons/icon_magnifier.png"
                 alt="magnifier icon"
               />
             </div>
           </div>
+          <p id="searchResult" class="mt-3 text-sm font-medium"></p>
 
           <!-- USER / CART -->
           <section class="hidden lg:flex justify-center items-center gap-4">
@@ -122,7 +124,7 @@
 
         <!-- MENU -->
         <section class="hidden lg:flex gap-8 w-full pt-3">
-          <div class="flex justify-center items-center gap-2">
+          <div class="relative group flex justify-center items-center gap-2">
             <img
               class="h-[10px]"
               src="images/icons/icon_menu.png"
@@ -131,16 +133,91 @@
             <a class="text-black text-[14px] font-medium text-nowrap" href=""
               >Todas as Categorias</a
             >
+
+            <div
+              class="absolute left-0 top-full mt-4 hidden group-hover:block w-[900px] bg-white shadow-lg rounded-md p-6"
+            >
+              <div class="flex gap-10">
+                <!-- COLUNA DE DEPARTAMENTOS -->
+                <div
+                  class="flex flex-col gap-3 border-r border-gray-300 pr-6 min-w-[180px]"
+                >
+                  <a class="text-blue-600 font-semibold">Departamento</a>
+                  <a class="hover:text-blue-600">Departamento</a>
+                  <a class="hover:text-blue-600">Departamento</a>
+                  <a class="hover:text-blue-600">Departamento</a>
+                  <a class="hover:text-blue-600">Departamento</a>
+                  <a class="hover:text-blue-600">Departamento</a>
+                </div>
+
+                <!-- COLUNAS DE CATEGORIAS -->
+                <div class="grid grid-cols-3 gap-10 text-sm">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-blue-600 font-semibold">Categoria</span>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <span class="text-blue-600 font-semibold">Categoria</span>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <span class="text-blue-600 font-semibold">Categoria</span>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                  </div>
+                </div>
+
+                <!-- BANNER -->
+                <div
+                  class="relative ml-auto w-[180px] h-[220px] rounded-lg overflow-hidden flex items-center"
+                >
+                  <!-- IMAGEM -->
+                  <div
+                    class="absolute inset-0 bg-cover bg-center bg-[url('images/backgrounds/cup_table_background.png')]"
+                  ></div>
+
+                  <!-- GRADIENT -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-black/60 to-black/80"
+                  ></div>
+
+                  <!-- CONTEÚDO -->
+                  <div class="relative z-10 text-white px-4">
+                    <p class="text-lg font-semibold leading-tight mb-4">
+                      Confira os <br />
+                      Produtos Que <br />
+                      acabaram De chegar
+                    </p>
+
+                    <button
+                      class="text-xs border border-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition"
+                    >
+                      VER TODOS
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
-          <a class="text-[14px]" href="">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="text-[14px]" href="#">Departamento</a>
         </section>
       </nav>
     </header>
@@ -154,7 +231,7 @@
         <div class="swiper-wrapper">
           <!-- SLIDE 1 -->
           <div class="swiper-slide flex justify-center">
-            <div class="flex items-center w-full max-w-[1200px]">
+            <div class="flex items-center w-full max-w-[1200px] ">
               <!-- IMAGE -->
               <div class="w-[50%] overflow-hidden flex">
                 <img
@@ -170,7 +247,7 @@
               <!-- TEXT -->
               <div class="w-1/2 flex flex-col items-center text-center gap-5">
                 <p
-                  class="text-[40px] lg:text-[100px] font-bold uppercase leading-none lg:text-nowrap"
+                  class="text-[30px] lg:text-[100px] font-bold uppercase leading-none lg:text-nowrap"
                 >
                   Super<span class="font-normal">Sale</span>
                 </p>
@@ -205,9 +282,9 @@
 
               <div class="w-1/2 flex flex-col items-center text-center gap-5">
                 <p
-                  class="text-[40px] lg:text-[100px] font-bold uppercase leading-none"
+                  class="text-[30px] lg:text-[100px] font-bold uppercase leading-none"
                 >
-                  Nova<span class="font-normal">Coleção</span>
+                  Super<span class="font-normal">Sale</span>
                 </p>
 
                 <p
@@ -239,9 +316,9 @@
 
               <div class="w-1/2 flex flex-col items-center text-center gap-5">
                 <p
-                  class="text-[40px] lg:text-[100px] font-bold uppercase leading-none"
+                  class="text-[30px] lg:text-[100px] font-bold uppercase leading-none"
                 >
-                  Nova<span class="font-normal">Coleção</span>
+                  Super<span class="font-normal">Sale</span>
                 </p>
 
                 <p

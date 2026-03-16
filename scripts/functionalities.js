@@ -2,7 +2,7 @@
 
 let lastScroll = 0;
 const searchBar = document.getElementById("searchBar");
-const scrollThreshold = 10; 
+const scrollThreshold = 10;
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.scrollY;
@@ -79,11 +79,42 @@ prevBtn2.addEventListener("click", () => {
   });
 });
 
+//search logic
+
+const input = document.getElementById("isearch");
+const button = document.getElementById("searchButton");
+const result = document.getElementById("searchResult");
+
+function search() {
+  const value = input.value.trim();
+
+  if (value === "") {
+    result.classList.add("hidden");
+    return;
+  }
+
+  result.textContent = `Você buscou por: '${value}'`;
+  result.classList.remove("hidden");
+}
+
+button.addEventListener("click", search);
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    search();
+  }
+});
+
+input.addEventListener("input", () => {
+  if (input.value.trim() === "") {
+    result.classList.add("hidden");
+  }
+});
 
 //Accordion logic
 const toggles = document.querySelectorAll(".footer-toggle");
 
-toggles.forEach(toggle => {
+toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
     const content = toggle.nextElementSibling;
     content.classList.toggle("hidden");
