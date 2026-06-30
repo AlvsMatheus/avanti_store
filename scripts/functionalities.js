@@ -40,7 +40,6 @@ const swiper = new Swiper(".swiper", {
 });
 
 
-
 //search logic
 
 const input = document.getElementById("isearch");
