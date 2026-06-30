@@ -39,45 +39,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-//Swiper products logic
 
-const carousel = document.getElementById("productsCarousel");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
-
-nextBtn.addEventListener("click", () => {
-  carousel.scrollBy({
-    left: 800,
-    behavior: "smooth",
-  });
-});
-
-prevBtn.addEventListener("click", () => {
-  carousel.scrollBy({
-    left: -800,
-    behavior: "smooth",
-  });
-});
-
-//Swiper products logic two
-
-const carousel2 = document.getElementById("productsCarousel2");
-const nextBtn2 = document.getElementById("nextBtn2");
-const prevBtn2 = document.getElementById("prevBtn2");
-
-nextBtn2.addEventListener("click", () => {
-  carousel2.scrollBy({
-    left: 800,
-    behavior: "smooth",
-  });
-});
-
-prevBtn2.addEventListener("click", () => {
-  carousel2.scrollBy({
-    left: -800,
-    behavior: "smooth",
-  });
-});
 
 //search logic
 
