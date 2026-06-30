@@ -132,7 +132,6 @@ function createProductCard(product) {
   `;
 }
 
-// Removido o 'export' para evitar quebra de script comum
 function initShelf(containerId, productsList) {
   const carousel = document.getElementById(containerId);
   if (!carousel) return;
@@ -143,23 +142,17 @@ function initShelf(containerId, productsList) {
   listContainer.innerHTML = productsList.map(product => createProductCard(product)).join('');
 }
 
-// ==========================================
-// INICIALIZAÇÃO E LÓGICA DOS CARROSÉIS
-// ==========================================
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  // 1. Renderiza os produtos no primeiro carrossel
   initShelf("productsCarousel", mockProducts);
   initShelf("productsCarousel2", mockProducts);
 
-  // 2. Elementos do Carrossel 1
   const carousel = document.getElementById("productsCarousel");
   const nextBtn = document.getElementById("nextBtn");
   const prevBtn = document.getElementById("prevBtn");
   const indicators = document.querySelectorAll("#carouselIndicators span");
 
-  // Lógica dos Seus Botões (Mantida com scrollBy de 800)
   if (nextBtn && carousel) {
     nextBtn.addEventListener("click", () => {
       carousel.scrollBy({ left: 800, behavior: "smooth" });
@@ -172,7 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Lógica de Atualização das Bolinhas (Dispara ao scrollar)
   if (carousel && indicators.length > 0) {
     const updateIndicators = () => {
       const scrollLeft = carousel.scrollLeft;
@@ -199,7 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     carousel.addEventListener("scroll", updateIndicators);
 
-    // Clique direto nas bolinhas para navegar
     indicators.forEach((indicator) => {
       indicator.addEventListener("click", (e) => {
         const index = parseInt(e.target.getAttribute("data-index"));
@@ -214,9 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
-  // LÓGICA DO CARROSSEL 2 (Se houver)
-  // ==========================================
   const carousel2 = document.getElementById("productsCarousel2");
   const nextBtn2 = document.getElementById("nextBtn2");
   const prevBtn2 = document.getElementById("prevBtn2");
