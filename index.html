@@ -386,8 +386,8 @@
     <main>
       <!-- HERO -->
       <section
-  class="swiper overflow-hidden h-[300px] lg:h-[520px] w-full bg-[#e7e7ea]"
->
+      class="swiper heroSwiper overflow-hidden h-[300px] lg:h-[520px] w-full bg-[#e7e7ea]"
+      >
   <div class="swiper-wrapper">
 
     <!-- SLIDE 1 -->
@@ -443,7 +443,7 @@
   </div>
 
   <!-- PAGINATION -->
-  <div class="swiper-pagination"></div>
+  <div class="swiper-pagination hero-pagination"></div>
 </section>
 
       <!-- LANÇAMENTOS -->
@@ -476,17 +476,10 @@
             />
           </button>
 
-          <div
-            id="productsCarousel"
-            class="overflow-x-auto scrollbar-hide scroll-smooth"
-          >
-            <div class="flex gap-4 md:gap-6"></div>
-          </div>
+            <div class="swiper shelfSwiper overflow-hidden">
+              <div id="productsCarousel" class="swiper-wrapper"></div>
 
-          <div id="carouselIndicators" class="flex justify-center gap-2 mt-6">
-            <span data-index="0" class="w-2 h-2 bg-gray-600 rounded-full cursor-pointer transition-colors"></span>
-            <span data-index="1" class="w-2 h-2 bg-gray-400 rounded-full cursor-pointer transition-colors"></span>
-            <span data-index="2" class="w-2 h-2 bg-gray-400 rounded-full cursor-pointer transition-colors"></span>
+              <div class="swiper-pagination shelf-pagination"></div>
           </div>
         </div>
       </section>
@@ -649,17 +642,9 @@
       <img class="h-[12px]" src="images/icons/icon_blue_arrow.png" alt="Seta direita" />
     </button>
 
-    <div
-      id="productsCarousel2"
-      class="overflow-x-auto scrollbar-hide scroll-smooth"
-    >
-      <div class="flex gap-4 md:gap-6"></div>
-    </div>
-
-    <div id="carouselIndicators2" class="flex justify-center gap-2 mt-6">
-      <span data-index="0" class="w-2 h-2 bg-gray-600 rounded-full cursor-pointer transition-colors"></span>
-      <span data-index="1" class="w-2 h-2 bg-gray-400 rounded-full cursor-pointer transition-colors"></span>
-      <span data-index="2" class="w-2 h-2 bg-gray-400 rounded-full cursor-pointer transition-colors"></span>
+    <div class="swiper shelfSwiper2 overflow-hidden">
+      <div id="productsCarousel2" class="swiper-wrapper"></div>
+      <div class="swiper-pagination shelf-pagination"></div>
     </div>
   </div>
 </section>
@@ -931,7 +916,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/functionalities.js"></script>
-    <script src="scripts/menu-mobile.js"></script>
-    <script src="scripts/shelf.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/swiper.js"></script>
   </body>
 </html>

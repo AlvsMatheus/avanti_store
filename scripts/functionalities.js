@@ -24,20 +24,22 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
+//Nav Logic menu
 
-//Swiper logic
+const categoriesButton = document.getElementById("categories-button");
+const categoriesMenu = document.getElementById("categories-menu");
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
+categoriesButton.addEventListener("click", () => {
+  categoriesMenu.classList.toggle("hidden");
+});
 
-  autoplay: {
-    delay: 4000,
-  },
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+document.addEventListener("click", (event) => {
+  if (
+    !categoriesButton.contains(event.target) &&
+    !categoriesMenu.contains(event.target)
+  ) {
+    categoriesMenu.classList.add("hidden");
+  }
 });
 
 

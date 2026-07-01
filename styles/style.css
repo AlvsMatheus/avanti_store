@@ -17,6 +17,11 @@
   background-color: black !important;
 }
 
+.shelf-pagination {
+  position: relative !important;
+  margin-top: 32px;
+}
+
 #productsCarousel::-webkit-scrollbar, #productsCarousel2::-webkit-scrollbar {
   display: none;
 }
