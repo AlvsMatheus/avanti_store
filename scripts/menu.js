@@ -1,3 +1,5 @@
+//mobile menu
+
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenuClose = document.getElementById("mobile-menu-close");
 
@@ -18,13 +20,13 @@ const departmentItems = document.querySelectorAll(".department-item");
 if (mobileMenuButton) {
   mobileMenuButton.addEventListener("click", () => {
     mobileOverlay.classList.remove("hidden");
-    mobileMenu.classList.remove("-translate-x-full");
+    mobileMenu.classList.remove("-translate-x-[101%]");
   });
 }
 
 
 function closeMobileMenu() {
-  mobileMenu.classList.add("-translate-x-full");
+  mobileMenu.classList.add("-translate-x-[101%]");
 
   setTimeout(() => {
     mobileOverlay.classList.add("hidden");
@@ -65,10 +67,7 @@ if (backToDepartments) {
   });
 }
 
-
-// =========================
-// MENU DESKTOP
-// =========================
+//desktop menu
 
 const deskButton = document.getElementById("categories-button");
 const deskButtonText = deskButton?.querySelector("span");
@@ -87,9 +86,6 @@ function clearActiveStates() {
   });
 }
 
-// -------------------------
-// TODAS AS CATEGORIAS
-// -------------------------
 
 if (deskButton && deskMenu) {
   deskButton.addEventListener("click", (e) => {
@@ -99,14 +95,12 @@ if (deskButton && deskMenu) {
     const isOpen = !deskMenu.classList.contains("hidden");
     const isCategoryMode = !deskMenu.classList.contains("is-department-view");
 
-    // Se já está aberto em categorias, fecha
     if (isOpen && isCategoryMode) {
       deskMenu.classList.add("hidden");
       clearActiveStates();
       return;
     }
 
-    // Abre em modo categorias
     deskMenu.classList.remove("hidden");
     deskMenu.classList.remove("is-department-view");
 
@@ -119,10 +113,6 @@ if (deskButton && deskMenu) {
   });
 }
 
-// -------------------------
-// DEPARTAMENTOS DA NAVBAR
-// -------------------------
-
 desktopDeptLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -134,7 +124,7 @@ desktopDeptLinks.forEach((link) => {
     const menuOpen = !deskMenu.classList.contains("hidden");
     const departmentMode = deskMenu.classList.contains("is-department-view");
 
-    // Fecha se clicar novamente no mesmo departamento
+
     if (menuOpen && departmentMode && alreadyActive) {
       deskMenu.classList.add("hidden");
       deskMenu.classList.remove("is-department-view");
@@ -142,7 +132,7 @@ desktopDeptLinks.forEach((link) => {
       return;
     }
 
-    // Abre em modo departamento
+
     deskMenu.classList.remove("hidden");
     deskMenu.classList.add("is-department-view");
 
@@ -150,10 +140,6 @@ desktopDeptLinks.forEach((link) => {
     link.classList.add("text-blue-600");
   });
 });
-
-// -------------------------
-// FECHAR CLICANDO FORA
-// -------------------------
 
 document.addEventListener("click", (e) => {
   const clickedInsideMenu =

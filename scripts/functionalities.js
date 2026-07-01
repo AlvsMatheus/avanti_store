@@ -1,29 +1,3 @@
-//Nav Logic Image
-
-let lastScroll = 0;
-const searchBar = document.getElementById("searchBar");
-const scrollThreshold = 10;
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-
-  if (Math.abs(currentScroll - lastScroll) < scrollThreshold) return;
-
-  if (window.innerWidth < 1024) {
-    if (currentScroll > lastScroll) {
-      searchBar.classList.add("hide-search");
-    } else {
-      searchBar.classList.remove("hide-search");
-    }
-  }
-
-  if (currentScroll <= 10) {
-    searchBar.classList.remove("hide-search");
-  }
-
-  lastScroll = currentScroll;
-});
-
 //search logic
 
 const input = document.getElementById("isearch");
@@ -63,5 +37,9 @@ toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
     const content = toggle.nextElementSibling;
     content.classList.toggle("hidden");
+    const arrow = toggle.querySelector("img");
+    if (arrow) {
+      arrow.classList.toggle("rotate-180");
+    }
   });
 });

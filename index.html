@@ -65,12 +65,17 @@
                 alt="AVANTI logo"
               />
 
-              <a href="#">
+              <a 
+              class="relative"
+              href="#">
                 <img
                   class="h-[24px]"
                   src="images/icons/icon_cart.png"
                   alt="cart shopping icon"
                 />
+                <span class="absolute -top-2 -right-1 rounded-full px-1 bg-[rgb(0,92,255)] text-white text-[12px]">
+                    2
+                </span>
               </a>
             </div>
 
@@ -129,6 +134,9 @@
                 src="images/icons/icon_cart.png"
                 alt="shopping cart icon"
               />
+               <span class="absolute -top-2 -right-1 rounded-full px-1 bg-[rgb(0,92,255)] text-white text-[12px]">
+                    2
+                </span>
             </div>
           </section>
         </div>
@@ -162,13 +170,13 @@
                 id="menu-departments-column"
                 class="flex flex-col gap-3 border-r border-gray-300 pr-6 min-w-[180px]"
               >
-                <span class="flex justify-between"><a class="text-blue-600 font-semibold">Departamento</a> <span>></span></span>
-                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
-                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
-                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
-                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
-                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
-                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+                <span class="flex justify-between items-center"><a class="text-blue-600 font-semibold">Departamento</a> <img class="w-[8px] h-[7px]" src="images/icons/icon_blue_arrow_right.png" alt="seta azul"></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <img class="w-[8px] h-[8px]" src="images/icons/icon_arrow_gray.png" alt="seta cinza"></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <img class="w-[8px] h-[8px]" src="images/icons/icon_arrow_gray.png" alt="seta cinza"></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <img class="w-[8px] h-[8px]" src="images/icons/icon_arrow_gray.png" alt="seta cinza"></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <img class="w-[8px] h-[8px]" src="images/icons/icon_arrow_gray.png" alt="seta cinza"></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <img class="w-[8px] h-[8px]" src="images/icons/icon_arrow_gray.png" alt="seta cinza"></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <img class="w-[8px] h-[8px]" src="images/icons/icon_arrow_gray.png" alt="seta cinza"></span>
               </div>   
 
               <div class="flex flex-col gap-5 flex-1">
@@ -242,15 +250,15 @@
         </section>
       </nav>
       <!-- BACKDROP -->
-<div
+        <div
   id="mobile-menu-overlay"
-  class="fixed inset-0 bg-black/50 z-50 hidden lg:hidden"
+  class="fixed inset-0 bg-[rgb(0,92,255)]/40 backdrop-blur-sm z-50 hidden lg:hidden"
 ></div>
 
 <!-- DRAWER -->
 <div
   id="mobile-menu"
-  class="fixed top-0 left-0 h-full w-[80%] max-w-[340px] bg-white z-[60] -translate-x-full transition-transform duration-300 lg:hidden overflow-hidden"
+  class="fixed top-0 left-0 h-full w-[80%] max-w-[340px] bg-white z-[60] -translate-x-[101%] transition-transform duration-300 lg:hidden overflow-hidden shadow-2xl"
 >
   <div class="relative w-full h-full">
 
@@ -259,52 +267,63 @@
       id="mobile-main-menu"
       class="absolute inset-0 bg-white overflow-y-auto"
     >
-      <div class="flex justify-between items-center p-5 border-b">
-        <h2 class="font-semibold text-lg">Menu</h2>
+      <div class="flex justify-between items-center p-5 border-b border-[rgb(0,92,255)]/10">
+        <h2 class="font-semibold text-lg text-[rgb(0,92,255)] tracking-tight">Menu</h2>
 
-        <button id="mobile-menu-close">
+        <button
+          id="mobile-menu-close"
+          class="w-9 h-9 flex items-center justify-center rounded-full text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)] hover:text-white transition-colors duration-200"
+        >
           ✕
         </button>
       </div>
 
       <button
         id="open-all-categories"
-        class="w-full flex justify-between items-center p-4 border-b"
+        class="w-full flex justify-between items-center m-4 p-4 rounded-xl bg-[rgb(0,92,255)] text-white font-medium shadow-md shadow-[rgb(0,92,255)]/20 hover:bg-[rgb(0,92,255)]/90 active:scale-[0.98] transition-all duration-200"
       >
         <span>Todas as Categorias</span>
-        <span>›</span>
+        <span class="text-white/80">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 1
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 1</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 2
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 2</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 3
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 3</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 4
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 4</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 5
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 5</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 6
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 6</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 7
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 7</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 8
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 8</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
     </div>
 
@@ -315,41 +334,49 @@
     >
       <button
         id="back-to-main"
-        class="w-full text-left p-4 border-b font-medium"
+        class="w-full flex items-center gap-2 text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 font-medium text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200"
       >
         ← Voltar
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 1
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 1</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 2
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 2</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 3
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 3</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 4
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 4</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 5
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 5</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 6
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 6</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 7
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 7</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
-      <button class="department-item w-full text-left p-4 border-b">
-        Departamento 8
+      <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
+        <span>Departamento 8</span>
+        <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
     </div>
 
@@ -360,21 +387,21 @@
     >
       <button
         id="back-to-departments"
-        class="w-full text-left p-4 border-b font-medium"
+        class="w-full flex items-center gap-2 text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 font-medium text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200"
       >
         ← Voltar
       </button>
 
-      <div class="p-4 font-semibold text-blue-600">
+      <div class="px-5 py-4 font-semibold text-white bg-[rgb(0,92,255)]">
         Departamento
       </div>
 
-      <a class="block p-4 border-b">Categoria 1</a>
-      <a class="block p-4 border-b">Categoria 2</a>
-      <a class="block p-4 border-b">Categoria 3</a>
-      <a class="block p-4 border-b">Categoria 4</a>
-      <a class="block p-4 border-b">Categoria 5</a>
-      <a class="block p-4 border-b">Categoria 6</a>
+      <a class="block px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200 cursor-pointer">Categoria 1</a>
+      <a class="block px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200 cursor-pointer">Categoria 2</a>
+      <a class="block px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200 cursor-pointer">Categoria 3</a>
+      <a class="block px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200 cursor-pointer">Categoria 4</a>
+      <a class="block px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200 cursor-pointer">Categoria 5</a>
+      <a class="block px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200 cursor-pointer">Categoria 6</a>
     </div>
 
   </div>
@@ -451,7 +478,7 @@
         <div class="relative w-full max-w-[1200px] px-4">
           <div class="flex justify-between items-center mb-3">
             <h2 class="text-md md:text-2xl font-semibold">Lançamentos</h2>
-            <a href="#" class="text-sm font-medium underline">Ver mais</a>
+            <a href="#" class="text-sm font-medium ">Ver mais</a>
           </div>
 
           <button
@@ -625,7 +652,7 @@
   <div class="relative w-full max-w-[1200px] px-4">
     <div class="flex justify-between items-center mb-3">
       <h2 class="text-md md:text-2xl font-semibold">Lançamentos</h2>
-      <a href="#" class="text-sm font-medium underline">Ver mais</a>
+      <a href="#" class="text-sm font-medium">Ver mais</a>
     </div>
 
     <button
@@ -670,7 +697,6 @@
         class="flex flex-col justify-center items-center gap-10 md:gap-5 text-md mt-20 mb-30 md:mt-10 h-[230px] font-medium"
       >
         <!--Newsletter-->
-
         <p>
           Cadastre-se na nossa
           <strong class="text-[rgb(0,92,255)]">newsletter</strong>
@@ -729,11 +755,11 @@
             <section
               class="flex flex-col gap-10 justify-center items-center md:items-start"
             >
-              <img src="images/logos/logo_avanti.png" alt="AVANTI logo" />
+              <img class="w-35" src="images/logos/logo_avanti.png" alt="AVANTI logo" />
               <div class="flex gap-10">
                 <a href="#"
                   ><img
-                    class="h-[20px] lg:w-[34px]"
+                    class="h-[22px] lg:w-[40px]"
                     src="images/logos/logo_instagram.png"
                     alt="instagram logo"
                 /></a>
@@ -745,7 +771,7 @@
                 /></a>
                 <a href="#"
                   ><img
-                    class="h-[20px] lg:w-[34px]"
+                    class="h-[20px] lg:w-[40px]"
                     src="images/logos/logo_youtube.png"
                     alt="youtube logo"
                 /></a>
@@ -768,7 +794,7 @@
                 <button
                   class="footer-toggle flex justify-between items-center px-5 py-4 lg:py-0 md:px-0"
                 >
-                  <h4 class="text-[16px] font-medium">Institucional</h4>
+                  <h5 class="font-bold text-[16px]">Institucional</h5>
                   <img
                     class="h-[10px] md:hidden"
                     src="images/icons/icon_arrow_down.png"
@@ -791,7 +817,7 @@
                 <button
                   class="footer-toggle flex justify-between items-center px-5 py-4 lg:py-0 md:px-0"
                 >
-                  <h4 class="text-[16px] font-medium">Central de ajuda</h4>
+                  <h5 class="font-bold text-[16px]">Central de ajuda</h5>
                   <img
                     class="h-[10px] md:hidden"
                     src="images/icons/icon_arrow_down.png"
@@ -815,7 +841,7 @@
                 <button
                   class="footer-toggle flex justify-between items-center px-5 py-4 lg:py-0 md:px-0"
                 >
-                  <h4 class="text-[16px] font-medium">Atendimento</h4>
+                  <h5 class="font-bold text-[16px]">Atendimento</h5>
                   <img
                     class="h-[10px] md:hidden"
                     src="images/icons/icon_arrow_down.png"
@@ -884,7 +910,7 @@
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
         </p>
-        <div
+      <div
           class="flex justify-between md:justify-center md:gap-10 items-center w-full px-8 py-4"
         >
           <div class="flex items-center gap-4">

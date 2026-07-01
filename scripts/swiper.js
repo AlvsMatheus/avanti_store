@@ -1,7 +1,4 @@
-//header
-
-
-//Swiper logic
+//Header Swiper logic
 
 const heroSwiper = new Swiper(".heroSwiper", {
   loop: true,
@@ -16,10 +13,7 @@ const heroSwiper = new Swiper(".heroSwiper", {
   },
 });
 
-
-// ==========================================
-// MOCK DE DADOS & RENDERIZAÇÃO (Shelf)
-// ==========================================
+//mock
 
 
 const mockProducts = [
@@ -226,6 +220,8 @@ function createProductCard(product) {
     </div>
   `;
 }
+
+//shelfs Swiper logic
 
 function initShelf(containerId, productsList) {
   const container = document.getElementById(containerId);
