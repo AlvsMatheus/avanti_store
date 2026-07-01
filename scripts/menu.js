@@ -66,78 +66,114 @@ if (backToDepartments) {
 }
 
 
-//LÓGICA PARA DESKTOP 
+// =========================
+// MENU DESKTOP
+// =========================
 
-{
-  const deskButton = document.getElementById("categories-button");
-  const deskButtonText = deskButton ? deskButton.querySelector("span") : null;
-  const deskMenu = document.getElementById("categories-menu");
-  const desktopDeptLinks = document.querySelectorAll(".desktop-dept-link");
+const deskButton = document.getElementById("categories-button");
+const deskButtonText = deskButton?.querySelector("span");
+const deskMenu = document.getElementById("categories-menu");
 
-  // Função auxiliar para remover o azul de TODOS os elementos
-  function clearActiveStates() {
-    if (deskButtonText) {
-      deskButtonText.classList.remove("text-blue-600");
-      deskButtonText.classList.add("text-black");
-    }
-    desktopDeptLinks.forEach(link => {
-      link.classList.remove("text-blue-600");
-    });
+const desktopDeptLinks = document.querySelectorAll(".desktop-dept-link");
+
+function clearActiveStates() {
+  if (deskButtonText) {
+    deskButtonText.classList.remove("text-blue-600");
+    deskButtonText.classList.add("text-black");
   }
 
-  // Clique em "Todas as Categorias"
-  if (deskButton && deskMenu) {
-    deskButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      
-      if (!deskMenu.classList.contains("hidden") && !deskMenu.classList.contains("is-department-view")) {
-        deskMenu.classList.add("hidden");
-        clearActiveStates();
-      } else {
-        deskMenu.classList.remove("hidden");
-        deskMenu.classList.remove("is-department-view");
-        
-        clearActiveStates();
-        if (deskButtonText) {
-          deskButtonText.classList.remove("text-black");
-          deskButtonText.classList.add("text-blue-600");
-        }
-      }
-    });
-  }
-
-  // Clique em um Departamento da Navbar
   desktopDeptLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault(); 
-      e.stopPropagation();
-
-      if (deskMenu) {
-
-        const isCurrentActive = link.classList.contains("text-blue-600");
-        const isMenuOpen = !deskMenu.classList.contains("hidden");
-        const isDeptView = deskMenu.classList.contains("is-department-view");
-
-        if (isMenuOpen && isDeptView && isCurrentActive) {
-          deskMenu.classList.add("hidden");
-          clearActiveStates();
-        } else {
-          
-          deskMenu.classList.add("is-department-view");
-          deskMenu.classList.remove("hidden");
-          
-          clearActiveStates();
-          link.classList.add("text-blue-600");
-        }
-      }
-    });
+    link.classList.remove("text-blue-600");
   });
+}
 
- 
-  document.addEventListener("click", (e) => {
-    if (deskMenu && !deskMenu.contains(e.target) && e.target !== deskButton) {
+// -------------------------
+// TODAS AS CATEGORIAS
+// -------------------------
+
+if (deskButton && deskMenu) {
+  deskButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isOpen = !deskMenu.classList.contains("hidden");
+    const isCategoryMode = !deskMenu.classList.contains("is-department-view");
+
+    // Se já está aberto em categorias, fecha
+    if (isOpen && isCategoryMode) {
       deskMenu.classList.add("hidden");
-      clearActiveStates(); 
+      clearActiveStates();
+      return;
+    }
+
+    // Abre em modo categorias
+    deskMenu.classList.remove("hidden");
+    deskMenu.classList.remove("is-department-view");
+
+    clearActiveStates();
+
+    if (deskButtonText) {
+      deskButtonText.classList.remove("text-black");
+      deskButtonText.classList.add("text-blue-600");
     }
   });
 }
+
+// -------------------------
+// DEPARTAMENTOS DA NAVBAR
+// -------------------------
+
+desktopDeptLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!deskMenu) return;
+
+    const alreadyActive = link.classList.contains("text-blue-600");
+    const menuOpen = !deskMenu.classList.contains("hidden");
+    const departmentMode = deskMenu.classList.contains("is-department-view");
+
+    // Fecha se clicar novamente no mesmo departamento
+    if (menuOpen && departmentMode && alreadyActive) {
+      deskMenu.classList.add("hidden");
+      deskMenu.classList.remove("is-department-view");
+      clearActiveStates();
+      return;
+    }
+
+    // Abre em modo departamento
+    deskMenu.classList.remove("hidden");
+    deskMenu.classList.add("is-department-view");
+
+    clearActiveStates();
+    link.classList.add("text-blue-600");
+  });
+});
+
+// -------------------------
+// FECHAR CLICANDO FORA
+// -------------------------
+
+document.addEventListener("click", (e) => {
+  const clickedInsideMenu =
+    deskMenu && deskMenu.contains(e.target);
+
+  const clickedInsideButton =
+    deskButton && deskButton.contains(e.target);
+
+  const clickedOnDepartment =
+    [...desktopDeptLinks].some((link) =>
+      link.contains(e.target)
+    );
+
+  if (
+    !clickedInsideMenu &&
+    !clickedInsideButton &&
+    !clickedOnDepartment
+  ) {
+    deskMenu?.classList.add("hidden");
+    deskMenu?.classList.remove("is-department-view");
+    clearActiveStates();
+  }
+});
