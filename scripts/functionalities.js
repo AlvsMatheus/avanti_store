@@ -31,15 +31,32 @@ input.addEventListener("input", () => {
 });
 
 //Accordion logic
-const toggles = document.querySelectorAll(".footer-toggle");
 
-toggles.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    const content = toggle.nextElementSibling;
-    content.classList.toggle("hidden");
-    const arrow = toggle.querySelector("img");
-    if (arrow) {
-      arrow.classList.toggle("rotate-180");
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  const toggles = document.querySelectorAll('.footer-toggle');
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      const arrow = toggle.querySelector('img');
+      const isOpen = !content.classList.contains('hidden');
+
+      toggles.forEach((otherToggle) => {
+        const otherContent = otherToggle.nextElementSibling;
+        const otherArrow = otherToggle.querySelector('img');
+
+        otherContent.classList.add('hidden');
+        otherContent.classList.remove('flex');
+        otherToggle.classList.remove('active');
+        otherArrow.classList.remove('rotate-180');
+      });
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        content.classList.add('flex');
+        toggle.classList.add('active');
+        arrow.classList.add('rotate-180');
+      }
+    });
   });
 });
