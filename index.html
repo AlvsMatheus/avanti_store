@@ -16,9 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    
     <title>AVANTI</title>
-
   </head>
 
   <body class="min-h-screen w-full font-[Nunito]">
@@ -261,15 +259,14 @@
 <!-- DRAWER -->
 <div
   id="mobile-menu"
-  class="fixed top-0 left-0 h-full w-[80%] max-w-[340px] bg-white z-[60] lg:hidden overflow-hidden shadow-2xl"
-  style="transform: translateX(-101%);"
+  class="fixed top-0 left-0 h-full w-[80%] max-w-[340px] bg-white z-[60] -translate-x-[101%] transition-transform duration-300 lg:hidden overflow-hidden shadow-2xl"
 >
   <div class="relative w-full h-full">
 
     <!-- MENU PRINCIPAL -->
-    <div
-      id="mobile-main-menu"
-      class="absolute inset-0 bg-white overflow-y-auto"
+   <div
+     id="mobile-main-menu"
+          class="absolute inset-0 bg-white overflow-y-auto"
     >
       <div class="flex justify-between items-center p-5 border-b border-[rgb(0,92,255)]/10">
         <h2 class="font-semibold text-lg text-[rgb(0,92,255)] tracking-tight">Menu</h2>
@@ -334,8 +331,7 @@
     <!-- DEPARTAMENTOS -->
     <div
       id="mobile-departments"
-      class="absolute inset-0 bg-white overflow-y-auto"
-      style="transform: translateX(100%);"
+      class="absolute inset-0 bg-white translate-x-full transition-transform duration-300 overflow-y-auto"
     >
       <button
         id="back-to-main"
@@ -388,8 +384,7 @@
     <!-- CATEGORIAS -->
     <div
       id="mobile-categories"
-      class="absolute inset-0 bg-white overflow-y-auto"
-      style="transform: translateX(100%);"
+      class="absolute inset-0 bg-white translate-x-full transition-transform duration-300 overflow-y-auto"
     >
       <button
         id="back-to-departments"
@@ -481,7 +476,7 @@
 
       <!-- LANÇAMENTOS -->
       <section class="flex justify-center py-16 bg-[#f5f5f7] overflow-hidden">
-        <div class="reveal-fade-up relative w-full max-w-[1200px] px-4">
+        <div class="relative w-full max-w-[1200px] px-4">
           <div class="flex justify-between items-center mb-3">
             <h2 class="text-md md:text-2xl font-semibold">Lançamentos</h2>
             <a href="#" class="text-sm font-medium ">Ver mais</a>
@@ -523,7 +518,7 @@
         class="flex flex-col md:flex-row justify-center items-center w-full mt-20"
       >
         <div
-          class="reveal-left flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
+          class="flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
         >
           <img
             class="md:hidden"
@@ -536,7 +531,7 @@
             alt="cup image"
           />
         </div>
-        <div class="reveal-right flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
+        <div class="flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
           <h1 class="text-2xl text-left font-medium uppercase">LOREM IPSUM</h1>
           <div class="flex flex-col gap-4 text-left text-[14px]">
             <p>
@@ -560,7 +555,7 @@
         class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 w-full px-5 py-7 bg-[#dedede] lg:px-20 2xl:px-100 lg:py-16 mt-20"
       >
         <!-- IMAGE -->
-        <div class="reveal-right row-span-1 lg:order-2 flex justify-center items-center">
+        <div class="row-span-1 lg:order-2 flex justify-center items-center">
           <img
             class="w-full h-full object-cover max-w-[500px]"
             src="images/products/cup_table_mobile.png"
@@ -570,7 +565,7 @@
 
         <!-- CONTENT -->
         <div
-          class="reveal-stagger row-span-1 flex flex-col justify-center items-center lg:items-start gap-6 mt-7 lg:mt-0"
+          class="row-span-1 flex flex-col justify-center items-center lg:items-start gap-6 mt-7 lg:mt-0"
         >
           <h1 class="text-2xl font-medium uppercase">Lorem Ipsum</h1>
 
@@ -620,7 +615,7 @@
         class="flex flex-col md:flex-row justify-center items-center w-full mt-20"
       >
         <div
-          class="reveal-left flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
+          class="flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
         >
           <img
             class="md:hidden"
@@ -633,7 +628,7 @@
             alt="cup image"
           />
         </div>
-        <div class="reveal-right flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
+        <div class="flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
           <h1 class="text-2xl text-left font-medium uppercase">LOREM IPSUM</h1>
           <div class="flex flex-col gap-4 text-left text-[14px]">
             <p>
@@ -655,7 +650,7 @@
 
       <!-- LANÇAMENTOS -->
       <section class="flex justify-center py-16 bg-[#f5f5f7] overflow-hidden">
-  <div class="reveal-fade-up relative w-full max-w-[1200px] px-4">
+  <div class="relative w-full max-w-[1200px] px-4">
     <div class="flex justify-between items-center mb-3">
       <h2 class="text-md md:text-2xl font-semibold">Lançamentos</h2>
       <a href="#" class="text-sm font-medium">Ver mais</a>
@@ -687,7 +682,7 @@
         class="flex justify-center items-center h-[450px] md:max-h-[650px] bg-[url('images/backgrounds/background_avanti_mobile.png')] md:bg-[url('images/backgrounds/background_avanti_pc.png')] bg-center bg-cover mb-40 md:mb-0"
       >
         <div
-          class="reveal-fade-up flex justify-center items-center h-[75px] w-full bg-[#005CFF]"
+          class="flex justify-center items-center h-[75px] w-full bg-[#005CFF]"
         >
           <p class="text-white text-center px-4">
             Entre em contato conosco e verifique a disponibilidade para sua
@@ -700,7 +695,7 @@
     <!-- FOOTER -->
     <footer>
       <section
-        class="reveal-fade-up flex flex-col justify-center items-center gap-10 md:gap-5 text-md mt-20 mb-30 md:mt-10 h-[230px] font-medium"
+        class="flex flex-col justify-center items-center gap-10 md:gap-5 text-md mt-20 mb-30 md:mt-10 h-[230px] font-medium"
       >
         <!--Newsletter-->
         <p>
@@ -948,8 +943,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/functionalities.js"></script>
-    <script type="module" src="scripts/menu.js"></script>
+    <script src="scripts/menu.js"></script>
     <script src="scripts/swiper.js"></script>
-    <script type="module" src="scripts/motion-init.js"></script>
   </body>
 </html>

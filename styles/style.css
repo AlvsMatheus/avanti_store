@@ -1,3 +1,4 @@
+
 .swiper-pagination-bullet {
   background-color: #4e4e4e !important;
   opacity: 1;
@@ -15,27 +16,3 @@
 #productsCarousel::-webkit-scrollbar, #productsCarousel2::-webkit-scrollbar {
   display: none;
 }
-
-.reveal-fade-up,
-      .reveal-left,
-      .reveal-right {
-        opacity: 0;
-      }
-      .reveal-stagger > * {
-        opacity: 0;
-      }
-      #productsCarousel > *,
-      #productsCarousel2 > * {
-        opacity: 0;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .reveal-fade-up,
-        .reveal-left,
-        .reveal-right,
-        .reveal-stagger > *,
-        #productsCarousel > *,
-        #productsCarousel2 > * {
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      }
