@@ -24,23 +24,6 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-//Nav Logic menu
-
-const categoriesButton = document.getElementById("categories-button");
-const categoriesMenu = document.getElementById("categories-menu");
-
-categoriesButton.addEventListener("click", () => {
-  categoriesMenu.classList.toggle("hidden");
-});
-
-document.addEventListener("click", (event) => {
-  if (
-    !categoriesButton.contains(event.target) &&
-    !categoriesMenu.contains(event.target)
-  ) {
-    categoriesMenu.classList.add("hidden");
-  }
-});
 
 //Swiper logic
 

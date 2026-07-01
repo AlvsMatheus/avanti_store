@@ -135,7 +135,6 @@
 
         <!-- MENU -->
         <section class="hidden lg:flex gap-7 w-full pt-3 relative">
-          <!-- BOTÃO -->
           <div class="flex justify-center items-center gap-2">
             <button
               id="categories-button"
@@ -154,66 +153,67 @@
             </button>
           </div>
 
-          <!-- DROPDOWN -->
           <div
             id="categories-menu"
-            class="absolute left-0 top-full mt-4 hidden w-full bg-white shadow-lg rounded-md p-6 z-50"
+            class="absolute left-0 top-full mt-4 hidden w-full bg-white shadow-lg rounded-md p-6 z-50 [&.is-department-view_#menu-departments-column]:hidden"
           >
-            <div class="flex gap-10">
-              <!-- COLUNA DE DEPARTAMENTOS -->
+            <div class="flex gap-10 w-full">
               <div
+                id="menu-departments-column"
                 class="flex flex-col gap-3 border-r border-gray-300 pr-6 min-w-[180px]"
               >
-                <a class="text-blue-600 font-semibold">Departamento</a>
-                <a class="hover:text-blue-600">Departamento</a>
-                <a class="hover:text-blue-600">Departamento</a>
-                <a class="hover:text-blue-600">Departamento</a>
-                <a class="hover:text-blue-600">Departamento</a>
-                <a class="hover:text-blue-600">Departamento</a>
+                <span class="flex justify-between"><a class="text-blue-600 font-semibold">Departamento</a> <span>></span></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+                <span class="flex justify-between"><a class="hover:text-blue-600">Departamento</a> <span>></span></span>
+              </div>   
+
+              <div class="flex flex-col gap-5 flex-1">
+                <h2 class="hidden [.is-department-view_&]:block text-black font-semibold text-[15px]">
+                  Departamento
+                </h2>
+
+                <div class="grid grid-cols-3 gap-10 max-w-[500px] text-sm">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-blue-600 font-semibold">Categoria</span>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <span class="text-blue-600 font-semibold">Categoria</span>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <span class="text-blue-600 font-semibold">Categoria</span>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                    <a>Categoria</a>
+                  </div>
+                </div>
               </div>
 
-              <!-- COLUNAS DE CATEGORIAS -->
-              <div class="grid grid-cols-3 gap-10 text-sm">
-                <div class="flex flex-col gap-2">
-                  <span class="text-blue-600 font-semibold">Categoria</span>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <span class="text-blue-600 font-semibold">Categoria</span>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <span class="text-blue-600 font-semibold">Categoria</span>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                  <a>Categoria</a>
-                </div>
-              </div>
-
-              <!-- BANNER -->
               <div
-                class="relative ml-auto w-[180px] h-[220px] rounded-lg overflow-hidden flex items-center"
+                class="relative ml-auto w-[180px] h-[220px] rounded-lg overflow-hidden flex items-center shrink-0"
               >
-                <!-- IMAGEM -->
                 <div
                   class="absolute inset-0 bg-cover bg-center bg-[url('images/backgrounds/cup_table_background.png')]"
                 ></div>
 
-                <!-- GRADIENT -->
                 <div
                   class="absolute inset-0 bg-gradient-to-r from-transparent via-black/60 to-black/80"
                 ></div>
 
-                <!-- CONTEÚDO -->
                 <div class="relative z-10 text-white px-4">
                   <p class="text-lg font-semibold leading-tight mb-4">
                     Confira os <br />
@@ -231,14 +231,14 @@
             </div>
           </div>
 
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
-          <a class="text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
+          <a class="desktop-dept-link text-[14px]" href="#">Departamento</a>
         </section>
       </nav>
       <!-- BACKDROP -->
