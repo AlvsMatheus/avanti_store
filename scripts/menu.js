@@ -1,69 +1,82 @@
-//mobile menu
-
+// mobile menu
+ 
+import { animate, stagger } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+ 
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenuClose = document.getElementById("mobile-menu-close");
-
+ 
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileOverlay = document.getElementById("mobile-menu-overlay");
-
+ 
 const mobileDepartments = document.getElementById("mobile-departments");
 const mobileCategories = document.getElementById("mobile-categories");
-
+ 
 const openAllCategories = document.getElementById("open-all-categories");
-
+ 
 const backToMain = document.getElementById("back-to-main");
 const backToDepartments = document.getElementById("back-to-departments");
-
+ 
 const departmentItems = document.querySelectorAll(".department-item");
-
-
-if (mobileMenuButton) {
-  mobileMenuButton.addEventListener("click", () => {
-    mobileOverlay.classList.remove("hidden");
-    mobileMenu.classList.remove("-translate-x-[101%]");
-  });
+ 
+const drawerSpring = { type: "spring", stiffness: 380, damping: 38, mass: 0.9 };
+const fade = { duration: 0.25, easing: "ease-out" };
+const easeOutSmooth = [0.22, 1, 0.36, 1];
+ 
+function staggerReveal(container, selector) {
+  const items = container.querySelectorAll(selector);
+  animate(
+    items,
+    { opacity: [0, 1], x: [16, 0] },
+    { delay: stagger(0.035, { startDelay: 0.08 }), duration: 0.3, easing: easeOutSmooth }
+  );
 }
-
-
+ 
+function openMobileMenu() {
+  mobileOverlay.classList.remove("hidden");
+  animate(mobileOverlay, { opacity: [0, 1] }, fade);
+  animate(mobileMenu, { x: ["-101%", "0%"] }, drawerSpring);
+  staggerReveal(mobileMenu, "#mobile-main-menu > *");
+}
+ 
 function closeMobileMenu() {
-  mobileMenu.classList.add("-translate-x-[101%]");
-
-  setTimeout(() => {
+  animate(mobileMenu, { x: "-101%" }, drawerSpring);
+ 
+  animate(mobileOverlay, { opacity: 0 }, fade).finished.then(() => {
     mobileOverlay.classList.add("hidden");
-  }, 300);
-
-  mobileDepartments.classList.add("translate-x-full");
-  mobileCategories.classList.add("translate-x-full");
+  });
+ 
+  // reseta os sub-painéis (sem animação, já estarão fora de vista atrás do drawer fechado)
+  mobileDepartments.style.transform = "translateX(100%)";
+  mobileCategories.style.transform = "translateX(100%)";
 }
-
+ 
+if (mobileMenuButton) mobileMenuButton.addEventListener("click", openMobileMenu);
 if (mobileMenuClose) mobileMenuClose.addEventListener("click", closeMobileMenu);
 if (mobileOverlay) mobileOverlay.addEventListener("click", closeMobileMenu);
-
-
+ 
 if (openAllCategories) {
   openAllCategories.addEventListener("click", () => {
-    mobileDepartments.classList.remove("translate-x-full");
+    animate(mobileDepartments, { x: ["100%", "0%"] }, drawerSpring);
+    staggerReveal(mobileDepartments, "#back-to-main, .department-item");
   });
 }
-
-
+ 
 if (backToMain) {
   backToMain.addEventListener("click", () => {
-    mobileDepartments.classList.add("translate-x-full");
+    animate(mobileDepartments, { x: "100%" }, drawerSpring);
   });
 }
-
-
+ 
 departmentItems.forEach((department) => {
   department.addEventListener("click", () => {
-    mobileCategories.classList.remove("translate-x-full");
+    animate(mobileCategories, { x: ["100%", "0%"] }, drawerSpring);
+    staggerReveal(mobileCategories, "#back-to-departments, .px-5.py-4.font-semibold, a");
   });
 });
-
-
+ 
 if (backToDepartments) {
   backToDepartments.addEventListener("click", () => {
-    mobileCategories.classList.add("translate-x-full");
+    animate(mobileCategories, { x: "100%" }, drawerSpring);
   });
 }
 

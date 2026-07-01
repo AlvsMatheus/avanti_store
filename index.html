@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="images/logos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    
     <title>AVANTI</title>
+
   </head>
 
   <body class="min-h-screen w-full font-[Nunito]">
@@ -258,7 +261,8 @@
 <!-- DRAWER -->
 <div
   id="mobile-menu"
-  class="fixed top-0 left-0 h-full w-[80%] max-w-[340px] bg-white z-[60] -translate-x-[101%] transition-transform duration-300 lg:hidden overflow-hidden shadow-2xl"
+  class="fixed top-0 left-0 h-full w-[80%] max-w-[340px] bg-white z-[60] lg:hidden overflow-hidden shadow-2xl"
+  style="transform: translateX(-101%);"
 >
   <div class="relative w-full h-full">
 
@@ -287,42 +291,42 @@
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 1</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 2</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 3</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 4</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 5</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 6</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 7</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 8</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
     </div>
@@ -330,7 +334,8 @@
     <!-- DEPARTAMENTOS -->
     <div
       id="mobile-departments"
-      class="absolute inset-0 bg-white translate-x-full transition-transform duration-300 overflow-y-auto"
+      class="absolute inset-0 bg-white overflow-y-auto"
+      style="transform: translateX(100%);"
     >
       <button
         id="back-to-main"
@@ -340,42 +345,42 @@
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 1</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 2</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 3</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 4</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 5</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 6</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 7</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
 
       <button class="department-item group w-full flex justify-between items-center text-left px-5 py-4 border-b border-[rgb(0,92,255)]/10 text-[rgb(0,92,255)]/80 hover:text-[rgb(0,92,255)] hover:bg-[rgb(0,92,255)]/5 transition-colors duration-200">
-        <span>Departamento 8</span>
+        <span>Departamento</span>
         <span class="text-[rgb(0,92,255)]/40 group-hover:text-[rgb(0,92,255)] group-hover:translate-x-0.5 transition-all duration-200">›</span>
       </button>
     </div>
@@ -383,7 +388,8 @@
     <!-- CATEGORIAS -->
     <div
       id="mobile-categories"
-      class="absolute inset-0 bg-white translate-x-full transition-transform duration-300 overflow-y-auto"
+      class="absolute inset-0 bg-white overflow-y-auto"
+      style="transform: translateX(100%);"
     >
       <button
         id="back-to-departments"
@@ -475,7 +481,7 @@
 
       <!-- LANÇAMENTOS -->
       <section class="flex justify-center py-16 bg-[#f5f5f7] overflow-hidden">
-        <div class="relative w-full max-w-[1200px] px-4">
+        <div class="reveal-fade-up relative w-full max-w-[1200px] px-4">
           <div class="flex justify-between items-center mb-3">
             <h2 class="text-md md:text-2xl font-semibold">Lançamentos</h2>
             <a href="#" class="text-sm font-medium ">Ver mais</a>
@@ -517,7 +523,7 @@
         class="flex flex-col md:flex-row justify-center items-center w-full mt-20"
       >
         <div
-          class="flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
+          class="reveal-left flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
         >
           <img
             class="md:hidden"
@@ -530,7 +536,7 @@
             alt="cup image"
           />
         </div>
-        <div class="flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
+        <div class="reveal-right flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
           <h1 class="text-2xl text-left font-medium uppercase">LOREM IPSUM</h1>
           <div class="flex flex-col gap-4 text-left text-[14px]">
             <p>
@@ -554,7 +560,7 @@
         class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 w-full px-5 py-7 bg-[#dedede] lg:px-20 2xl:px-100 lg:py-16 mt-20"
       >
         <!-- IMAGE -->
-        <div class="row-span-1 lg:order-2 flex justify-center items-center">
+        <div class="reveal-right row-span-1 lg:order-2 flex justify-center items-center">
           <img
             class="w-full h-full object-cover max-w-[500px]"
             src="images/products/cup_table_mobile.png"
@@ -564,7 +570,7 @@
 
         <!-- CONTENT -->
         <div
-          class="row-span-1 flex flex-col justify-center items-center lg:items-start gap-6 mt-7 lg:mt-0"
+          class="reveal-stagger row-span-1 flex flex-col justify-center items-center lg:items-start gap-6 mt-7 lg:mt-0"
         >
           <h1 class="text-2xl font-medium uppercase">Lorem Ipsum</h1>
 
@@ -614,7 +620,7 @@
         class="flex flex-col md:flex-row justify-center items-center w-full mt-20"
       >
         <div
-          class="flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
+          class="reveal-left flex justify-center items-center w-full md:w-[650px] lg:min-h-[750px] md:bg-[#c2c2c2]"
         >
           <img
             class="md:hidden"
@@ -627,7 +633,7 @@
             alt="cup image"
           />
         </div>
-        <div class="flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
+        <div class="reveal-right flex flex-col gap-4 pe-5 pl-8 my-10 max-w-[490px]">
           <h1 class="text-2xl text-left font-medium uppercase">LOREM IPSUM</h1>
           <div class="flex flex-col gap-4 text-left text-[14px]">
             <p>
@@ -649,7 +655,7 @@
 
       <!-- LANÇAMENTOS -->
       <section class="flex justify-center py-16 bg-[#f5f5f7] overflow-hidden">
-  <div class="relative w-full max-w-[1200px] px-4">
+  <div class="reveal-fade-up relative w-full max-w-[1200px] px-4">
     <div class="flex justify-between items-center mb-3">
       <h2 class="text-md md:text-2xl font-semibold">Lançamentos</h2>
       <a href="#" class="text-sm font-medium">Ver mais</a>
@@ -681,7 +687,7 @@
         class="flex justify-center items-center h-[450px] md:max-h-[650px] bg-[url('images/backgrounds/background_avanti_mobile.png')] md:bg-[url('images/backgrounds/background_avanti_pc.png')] bg-center bg-cover mb-40 md:mb-0"
       >
         <div
-          class="flex justify-center items-center h-[75px] w-full bg-[#005CFF]"
+          class="reveal-fade-up flex justify-center items-center h-[75px] w-full bg-[#005CFF]"
         >
           <p class="text-white text-center px-4">
             Entre em contato conosco e verifique a disponibilidade para sua
@@ -694,7 +700,7 @@
     <!-- FOOTER -->
     <footer>
       <section
-        class="flex flex-col justify-center items-center gap-10 md:gap-5 text-md mt-20 mb-30 md:mt-10 h-[230px] font-medium"
+        class="reveal-fade-up flex flex-col justify-center items-center gap-10 md:gap-5 text-md mt-20 mb-30 md:mt-10 h-[230px] font-medium"
       >
         <!--Newsletter-->
         <p>
@@ -942,7 +948,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/functionalities.js"></script>
-    <script src="scripts/menu.js"></script>
+    <script type="module" src="scripts/menu.js"></script>
     <script src="scripts/swiper.js"></script>
+    <script type="module" src="scripts/motion-init.js"></script>
   </body>
 </html>
