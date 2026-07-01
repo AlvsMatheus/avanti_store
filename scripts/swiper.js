@@ -3,7 +3,7 @@
 
 //Swiper logic
 
-const swiper = new Swiper(".heroSwiper", {
+const heroSwiper = new Swiper(".heroSwiper", {
   loop: true,
 
   autoplay: {
